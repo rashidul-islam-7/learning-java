@@ -27,6 +27,7 @@ A data type tells Java what kind of data a variable will store.
      - boolean - Stores one of two values: true or false
 ---------------------------------------------------------
  ## 2. Non-Primitive (Reference) Data Types
+     
      - Store references (memory addresses) to objects.
      - Can represent complex data and collections of values.
      - Created by Java or by the programmer.
