@@ -152,3 +152,177 @@ System.out.println(name instanceof String);
 Example
 int x = 10, y = 20, z = 30;
 
+----------------------------------------------------------------------------------
+
+# Java Loops Statement
+
+## What is a Loop?
+
+A **loop** is used to execute the same block of code **repeatedly** until a specific condition becomes false.
+
+Instead of writing the same code many times, we use a loop.
+
+### Example
+
+Without Loop:
+
+```java
+System.out.println("Hello");
+System.out.println("Hello");
+System.out.println("Hello");
+```
+
+With Loop:
+
+```java
+for (int i = 1; i <= 3; i++) {
+    System.out.println("Hello");
+}
+```
+
+Output:
+
+```
+Hello
+Hello
+Hello
+```
+
+---
+
+# Why Do We Use Loops?
+
+Loops help us:
+
+- Reduce duplicate code
+- Save time
+- Make programs shorter and cleaner
+- Repeat tasks automatically
+
+---
+
+# Types of Loops in Java
+
+Java provides three main loops:
+
+1. `for` Loop
+2. `while` Loop
+3. `do...while` Loop
+
+---
+
+# for Loop
+
+Use a **for loop** when you know how many times the loop should run.
+
+### Syntax
+
+```java
+for (initialization; condition; update) {
+
+    // Code to execute
+}
+```
+
+### Example
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+### Parts of a for Loop
+
+```java
+for (int i = 1; i <= 5; i++)
+```
+
+| Part | Description |
+|------|-------------|
+| `int i = 1` | Starting value |
+| `i <= 5` | Loop condition |
+| `i++` | Increase value by 1 |
+
+---
+
+# while Loop
+
+Use a **while loop** when you don't know exactly how many times the loop will run.
+
+### Syntax
+
+```java
+while (condition) {
+
+    // Code
+}
+```
+
+### Example
+
+```java
+int i = 1;
+
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+# do...while Loop
+
+The **do...while** loop executes the code **at least once**, even if the condition is false.
+
+### Syntax
+
+```java
+do {
+
+    // Code
+
+} while (condition);
+```
+
+### Example
+
+```java
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+Output
+
+```
+1
+2
+3
+4
+5
+```
