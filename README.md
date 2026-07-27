@@ -1032,3 +1032,349 @@ Use `switch` when:
 | switch | Select one block from multiple options |
 | break | Exit a loop or switch immediately |
 | continue | Skip the current iteration and continue the loop |
+
+
+-------------------------------------------------------------------------------
+
+
+# Java Arrays (1D & 2D)
+
+## What is an Array?
+
+An **Array** is a **Non-Primitive (Reference) Data Type** in Java that is used to store **multiple values of the same data type** in a single variable.
+
+Instead of creating many variables, we can store all values inside one array.
+
+---
+
+# Types of Arrays in Java
+
+Java arrays are mainly divided into two types:
+
+1. **One-Dimensional Array (1D Array)**
+2. **Two-Dimensional Array (2D Array)**
+
+---
+
+# 1. One-Dimensional Array (1D Array)
+
+A **One-Dimensional Array** stores multiple values in a **single row (linear list)**.
+
+## Example Without Array
+
+```java
+int mark1 = 85;
+int mark2 = 90;
+int mark3 = 95;
+int mark4 = 88;
+```
+
+## Example With Array
+
+```java
+int[] marks = {85, 90, 95, 88};
+```
+
+Here,
+
+- `int` → Data type
+- `[]` → One-Dimensional Array
+- `marks` → Array variable
+- `{85, 90, 95, 88}` → Values
+
+---
+
+## 1D Array Structure
+
+| Index | Value |
+|------:|------:|
+| 0 | 85 |
+| 1 | 90 |
+| 2 | 95 |
+| 3 | 88 |
+
+> **Note:** Array index always starts from **0**.
+
+---
+
+## Access Elements
+
+```java
+System.out.println(marks[0]); // 85
+System.out.println(marks[2]); // 95
+```
+
+---
+
+## Array Length
+
+```java
+System.out.println(marks.length);
+```
+
+Output
+
+```text
+4
+```
+
+---
+
+## Print Using for Loop
+
+```java
+for (int i = 0; i < marks.length; i++) {
+    System.out.println(marks[i]);
+}
+```
+
+---
+
+## Print Using For-Each Loop
+
+```java
+for (int mark : marks) {
+    System.out.println(mark);
+}
+```
+
+---
+
+# Example Program (1D Array)
+
+```java
+public class OneDimensionalArray {
+
+    public static void main(String[] args) {
+
+        int[] marks = {85, 90, 95, 88};
+
+        System.out.println("===== One-Dimensional Array =====");
+
+        System.out.println("First Mark  : " + marks[0]);
+        System.out.println("Second Mark : " + marks[1]);
+        System.out.println("Third Mark  : " + marks[2]);
+        System.out.println("Fourth Mark : " + marks[3]);
+
+        System.out.println("\nUsing For Loop");
+
+        for (int i = 0; i < marks.length; i++) {
+            System.out.println(marks[i]);
+        }
+
+        System.out.println("\nUsing For-Each Loop");
+
+        for (int mark : marks) {
+            System.out.println(mark);
+        }
+    }
+}
+```
+
+---
+
+# 2. Two-Dimensional Array (2D Array)
+
+A **Two-Dimensional Array** is an **array of arrays**.
+
+It stores data in **Rows and Columns**, just like a table.
+
+---
+
+## Example
+
+```java
+int[][] marks = {
+    {85, 90, 95},
+    {70, 75, 80},
+    {88, 92, 86}
+};
+```
+
+Here,
+
+- `int` → Data type
+- `[][]` → Two-Dimensional Array
+- `marks` → Array variable
+
+---
+
+## 2D Array Structure
+
+| Row | Column 0 | Column 1 | Column 2 |
+|----:|---------:|---------:|---------:|
+| 0 | 85 | 90 | 95 |
+| 1 | 70 | 75 | 80 |
+| 2 | 88 | 92 | 86 |
+
+---
+
+## Access Elements
+
+```java
+marks[0][0] // 85
+marks[0][2] // 95
+
+marks[1][1] // 75
+
+marks[2][0] // 88
+```
+
+The first index represents the **Row**.
+
+The second index represents the **Column**.
+
+---
+
+## Number of Rows
+
+```java
+System.out.println(marks.length);
+```
+
+Output
+
+```text
+3
+```
+
+---
+
+## Number of Columns
+
+```java
+System.out.println(marks[0].length);
+```
+
+Output
+
+```text
+3
+```
+
+---
+
+## Print Using Nested for Loop
+
+```java
+for (int i = 0; i < marks.length; i++) {
+
+    for (int j = 0; j < marks[i].length; j++) {
+
+        System.out.print(marks[i][j] + " ");
+
+    }
+
+    System.out.println();
+}
+```
+
+---
+
+# Example Program (2D Array)
+
+```java
+public class TwoDimensionalArray {
+
+    public static void main(String[] args) {
+
+        int[][] marks = {
+                {85, 90, 95},
+                {70, 75, 80},
+                {88, 92, 86}
+        };
+
+        System.out.println("===== Two-Dimensional Array =====");
+
+        System.out.println("marks[0][0] = " + marks[0][0]);
+        System.out.println("marks[1][2] = " + marks[1][2]);
+        System.out.println("marks[2][1] = " + marks[2][1]);
+
+        System.out.println("\nAll Elements:");
+
+        for (int i = 0; i < marks.length; i++) {
+
+            for (int j = 0; j < marks[i].length; j++) {
+
+                System.out.print(marks[i][j] + " ");
+
+            }
+
+            System.out.println();
+        }
+    }
+}
+```
+
+---
+
+# Difference Between 1D and 2D Array
+
+| Feature | 1D Array | 2D Array |
+|----------|----------|----------|
+| Structure | Single Row | Rows & Columns |
+| Declaration | `int[] arr` | `int[][] arr` |
+| Index | One Index | Two Indexes |
+| Example | `arr[2]` | `arr[1][2]` |
+| Loop | Single Loop | Nested Loop |
+| Use Case | List of Values | Table / Matrix |
+
+---
+
+# Advantages of Arrays
+
+- Stores multiple values in one variable.
+- Stores only the same data type.
+- Easy to process using loops.
+- Fast access using indexes.
+- Reduces code duplication.
+
+---
+
+# Limitations of Arrays
+
+- Fixed size.
+- Can store only one data type.
+- Insertion and deletion are difficult.
+
+---
+
+# Key Points
+
+- Array is a **Non-Primitive (Reference) Data Type**.
+- Stores multiple values of the same data type.
+- Index always starts from **0**.
+- Use `.length` to get the total number of elements.
+- Use `for` or `for-each` loop for a 1D Array.
+- Use **Nested for Loop** for a 2D Array.
+
+---
+
+# Practice
+
+## One-Dimensional Array
+
+1. Print all elements.
+2. Find the sum.
+3. Find the average.
+4. Find the maximum value.
+5. Find the minimum value.
+6. Search an element.
+7. Reverse an array.
+8. Take array input using Scanner.
+
+---
+
+## Two-Dimensional Array
+
+1. Print all elements.
+2. Find the sum of all elements.
+3. Find the maximum value.
+4. Find the minimum value.
+5. Print a specific row.
+6. Print a specific column.
+7. Take 2D Array input using Scanner.
+8. Add two matrices.
+9. Transpose a matrix.
+10. Print the diagonal elements.
+
